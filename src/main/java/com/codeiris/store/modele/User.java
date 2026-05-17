@@ -1,8 +1,5 @@
 package com.codeiris.store.modele;
 
-// import org.checkerframework.checker.units.qual.C;
-
-// import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,17 +16,15 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "users")
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor // Lombok pour générer les getters, setters, constructeurs 
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor  
 
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Génère automatiquement l'ID
-    private Long id; // ID unique pour chaque utilisateur Long pour les grands nombres 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; 
+    @Column(unique = true, nullable = false) 
+    private String email; 
 
-    @Column(unique = true, nullable = false) // Email doit être unique et non null
-    private String email; // Email de l'utilisateur, doit être unique
-
-    @Column(nullable = false) // Mot de passe ne peut pas être null
-    private String password; // Mot de passe hashé de l'utilisateur
-
+    @Column(nullable = false) 
+    private String password;
 }
