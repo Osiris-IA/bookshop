@@ -29,9 +29,9 @@ class BookServiceTest {
 
     @Test
     void ShouldReturnPageOfBooks() {
-        Book book1 = new Book(1L, "Book Title 1", "Author 1", null, null, 0);
-        Book book2 = new Book(2L, "Book Title 2", "Author 2", null, null, 0);
-        Book book3 = new Book(3L, "Book Title 3", "Author 3", null, null, 0);
+        Book book1 = new Book(1L, "Book Title 1", "Author 1", null, null, 0, null, null);
+        Book book2 = new Book(2L, "Book Title 2", "Author 2", null, null, 0, null, null);
+        Book book3 = new Book(3L, "Book Title 3", "Author 3", null, null, 0, null, null);
 
         // Given
         List<Book> books = List.of(book1, book2, book3);

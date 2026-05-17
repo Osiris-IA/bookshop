@@ -42,5 +42,11 @@ public class Book {
     private String description;
 
     @Column(nullable = false)
-    private Integer stock;
+    private Integer stock; 
+
+    @Column(nullable = false)
+    private Integer numberOfPages; 
+
+    @Column(nullable = false)
+    private String summary; 
 }
