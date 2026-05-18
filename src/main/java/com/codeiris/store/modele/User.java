@@ -11,8 +11,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-// entité et accès à la bdd pour les utilisateurs
-// ID / email (unique) / mot de passe (hashé) 
+
 
 @Entity
 @Table(name = "users")

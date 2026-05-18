@@ -1,8 +1,5 @@
 package com.codeiris.store.modele;
 
-// import org.checkerframework.checker.units.qual.C;
-
-// import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,8 +11,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-// entité et accès à la bdd pour les utilisateurs
-// ID / email (unique) / mot de passe (hashé) 
+
 
 @Entity
 @Table(name = "books")
