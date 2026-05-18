@@ -1,0 +1,29 @@
+name: Java CI avec Gradle
+
+# Le robot se déclenche à chaque push ou pull-request sur n'importe quelle branche
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code source
+        uses: actions/checkout@v4
+
+      - name: Configurer Java JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: "temurin"
+          cache: "gradle"
+
+      - name: Rendre le wrapper Gradle exécutable
+        run: chmod +x gradlew
+
+      - name: Build et Tests avec Gradle
+        run: ./gradlew build
