@@ -8,24 +8,23 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
 import lombok.*;
 
-
 @Entity
 @Table(name = "cart_items")
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class CartItem {
     @Id
-    @GeneratedValue(Cart cart2, Book book2, int quantity2strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long cartId;
-    private Long bookId;
     private int quantity;
 
-    @ManyToOne 
-    private Book book; // quel livre ? 
+    @ManyToOne
+    private Book book;
 
     @ManyToOne
-    private Cart cart; // quel panier appartient cette ligne ?
-
+    private Cart cart;
 
 }
