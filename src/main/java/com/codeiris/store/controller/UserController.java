@@ -32,13 +32,3 @@ public class UserController {
     }
 }
 
-// @RequestMapping("/api/users") Définit le chemin de base pour les endpoints
-// liés aux utilisateurs
-// Déclaration d'une dépendance vers UserService pour accéder à la logique mé
-// ier liée aux utilisateurs
-// User createdUser = userService.createAccount(user); // Appelle la m
-// thode createAccount du servi
-// Retourne une réponse HTTP avec le nouvel utilisateur créé et un statut 20
-// Created
-
-//

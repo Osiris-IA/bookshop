@@ -24,8 +24,7 @@ class BookServiceTest {
     @InjectMocks
     private BookService bookService;
 
-    // Test Quand on t'appelle avec telle demande de page, renvoie une fausse Page
-    // contenant une liste de 2 ou 3 faux livres
+    // Test Quand on t'appelle avec telle demande de page, renvoie une fausse Page contenant une liste de 2 ou 3 faux livres
 
     @Test
     void ShouldReturnPageOfBooks() {

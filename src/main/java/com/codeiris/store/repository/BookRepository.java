@@ -14,7 +14,3 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     List<Book> findByTitle(String title); 
 }
 
-// Repository pour gérer les opérations de persistance des livres dans la base
-// de données.
-// Méthode pour trouver des livres par titre, génère une requête SQL "SELECT * FROM books WHERE title = :title"
-// JpaRepository fournit des méthodes de base pour les opérations CRUD (Create, Read, Update, Delete) sur les entités Book.
